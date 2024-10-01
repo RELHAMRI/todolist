@@ -14,14 +14,18 @@
 </head>
 
 <body>
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/public/img/tasknkids.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Task'N'Kids
-    </a>
-    <li><a href="/">Inscription</a></li>
-    <li><a href="/">Connexion</a></li>
-  </div>
-</nav>
+    <header>
+        <nav class="sign">
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img src="/public/img/tasknkids.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Task'N'Kids
+                </a>
+            </div>
+            <ul class="sign">
+                <li><a href="/">Inscription</a></li>
+                <li><a href="/">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="myBody">

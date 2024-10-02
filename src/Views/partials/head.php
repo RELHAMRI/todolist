@@ -14,18 +14,21 @@
 </head>
 
 <body>
-    <header>
-        <nav class="sign">
-            <div>
-                <a class="navbar-brand" href="#">
-                    <img src="/public/img/tasknkids.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    Task'N'Kids
-                </a>
+    <nav class="navbar navbar-expand-lg myNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/public/img/logo.png" alt="Logo" width="50" height="50"> Task'n'Kids
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Inscription</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="sign">
-                <li><a href="/">Inscription</a></li>
-                <li><a href="/">Connexion</a></li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <div class="myBody">

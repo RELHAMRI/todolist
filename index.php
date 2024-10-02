@@ -11,4 +11,5 @@ $router = new Router();
  */
 
 $router->addRoute('/', 'HomeController', 'index');
+$router->addRoute('/register', 'RegisterController', 'index');
 $router->handleRequest();

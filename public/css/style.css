@@ -1,23 +1,29 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+h1 {
+	background-color: #e8e8f2;
+	padding: 20px;
+	text-align: center;
+	color: #0e3698;
+}
+.myNav {
+	background-color: #86c6f6;
 }
 
-header {
-    background-color: rgb(222, 186, 52);
-    
+.myBody {
+	background-image: url("/public/img/fond.jpeg");
+	background-size: cover;
 }
-
-header nav{
-    display: flex;
-    justify-content: space-between;
+.myFooter {
+	background-color: black;
 }
-
-.sign, .sign a, .sign li {
-    display:flex;
-    text-decoration: none;
-    list-style: none;
-    margin: 5px;
-    color: black;
+.bgp {
+	background-color: #7b2fd1;
+}
+.bgb {
+	background-color: #0e3698;
+}
+.bgbc {
+	background-color: #86c6f6;
+}
+.bgg {
+	background-color: #e8e8f2;
 }

@@ -1,7 +1,7 @@
 </div>
 <footer class="text-center text-light myFooter">
     <div class="text-center p-3">
-        © Copyright : nanaplouf <?php echo date("Y") ?>
+    <p>&copy; <?php echo date("Y") ?> Mon Site - Tous droits réservés.</p> 
     </div>
 </footer>
 </body>

@@ -52,7 +52,8 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="logo">Mon Site</a>
+            <a href="/"><img src="/public/img/tasknkids.png" width="80" alt=""></a>
+
             <ul class="nav-links">
                 <?php
                 if (isset($_SESSION['user'])) {

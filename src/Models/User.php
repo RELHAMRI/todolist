@@ -27,10 +27,8 @@ class User
     public function save(): bool
     {
         $pdo = DataBase::getConnection();
-        $sql = "INSERT INTO user (id,pseudo,mail,password,id_role) VALUES (?,?,?,?,?)";
         $sql = "INSERT INTO user (id,pseudo,mail,password,score,id_role) VALUES (?,?,?,?,?,?)";
         $statement = $pdo->prepare($sql);
-        return $statement->execute([$this->id, $this->pseudo, $this->mail, $this->password, $this->id_role]);
         return $statement->execute([$this->id, $this->pseudo, $this->mail, $this->password, $this->score, $this->id_role]);
     }
 
@@ -50,6 +48,19 @@ class User
         }
     }
 
+    public function getUserById()
+    {
+        $pdo = DataBase::getConnection();
+        $sql = "SELECT * FROM `user` WHERE `id` = ?";
+        $statement = $pdo->prepare($sql);
+        $statement->execute([$this->id]);
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            return new User($row['id'], $row['pseudo'], $row['mail'], $row['password'], $row['score'], $row['id_role']);
+        } else {
+            return null;
+        }
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -73,6 +84,7 @@ class User
     {
         return $this->score;
     }
+
     public function getId_role(): ?int
     {
         return $this->id_role;
@@ -107,6 +119,7 @@ class User
         $this->score = $score;
         return $this;
     }
+
     public function setIdRole(int|string $id_role): static
     {
         $this->id_role = $id_role;

@@ -18,6 +18,7 @@ class Task
     protected ?string $status;
     protected ?string $pseudo;
 
+
     public function __construct(?int $id, ?string $title, ?string $content, ?string $creation_date, ?string $start_task, ?string $stop_task, ?int $point, ?int $id_user, ?string $status, ?string $pseudo)
     {
         $this->id = $id;
@@ -94,6 +95,16 @@ class Task
             return null;
         }
     }
+
+    public function updateTask()
+    {
+        $pdo = DataBase::getConnection();
+        $sql = "UPDATE `task` 
+        SET `title` = ?, `content` = ?, `start_task` = ?, `stop_task` = ?, `point` = ?
+        WHERE `task`.`id` = ?";
+        $statement = $pdo->prepare($sql);
+        return $statement->execute([$this->title, $this->content, $this->start_task, $this->stop_task, $this->point, $this->id]);
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +147,7 @@ class Task
     {
         return $this->status;
     }
+
     public function getPseudo(): ?string
     {
         return $this->pseudo;
@@ -189,11 +201,12 @@ class Task
         return $this;
     }
 
-    public function setStatus(?string $status)
+    public function setStatus(?string $status): static
     {
         $this->status = $status;
         return $this;
     }
+
     public function setPseudo(?string $pseudo): static
     {
         $this->pseudo = $pseudo;
